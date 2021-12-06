@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AcmeCorp\ReferenceExtension\Controller;
+namespace Bolt\TntSearch\Controller;
 
 use Bolt\Extension\ExtensionController;
 use Bolt\Utils\Sanitiser;

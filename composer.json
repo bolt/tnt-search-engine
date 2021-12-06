@@ -1,12 +1,12 @@
 {
-    "name": "acmecorp/reference-extension",
-    "description": "📦 This Bolt extension can be used as a starting point to base your own extensions on.",
+    "name": "bolt/tnt-search-engine",
+    "description": "A search engine for Bolt using TNTSearch",
     "type": "bolt-extension",
     "license": "MIT",
     "authors": [
         {
-            "name": "YourNameHere",
-            "email": "youremail@acme.com"
+            "name": "Ivo Valchev",
+            "email": "ivo.v.valchev@gmail.com"
         }
     ],
     "require": {
@@ -14,17 +14,17 @@
         "twig/twig": "^2.12 | ^3.0"
     },
     "require-dev": {
-        "bolt/core": "^4.1",
+        "bolt/core": "^4.1 || ^5.1",
         "symplify/easy-coding-standard": "^8.3"
     },
     "autoload": {
         "psr-4": {
-            "AcmeCorp\\ReferenceExtension\\": "src/"
+            "Bolt\\TntSearch\\": "src/"
         }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
-        "entrypoint": "AcmeCorp\\ReferenceExtension\\Extension"
+        "entrypoint": "Bolt\\TntSearch\\Extension"
     }
 }
