@@ -13,7 +13,7 @@ class Extension extends BaseExtension
      */
     public function getName(): string
     {
-        return 'AcmeCorp ReferenceExtension';
+        return 'Bolt TNTSearch Engine';
     }
 
     /**
@@ -25,11 +25,6 @@ class Extension extends BaseExtension
      */
     public function initialize($cli = false): void
     {
-        $this->addWidget(new ReferenceWidget());
-
-        $this->addTwigNamespace('reference-extension');
-
-        $this->addListener('kernel.response', [new EventListener(), 'handleEvent']);
     }
 
     /**
