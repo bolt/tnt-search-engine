@@ -1,11 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Bolt\TntSearch\Doctrine;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class DbConnectionConfig
+class ConnectionConfig
 {
     /** @var EntityManagerInterface */
     private $em;
@@ -24,12 +26,12 @@ class DbConnectionConfig
         $connection = $this->em->getConnection();
 
         return [
-            'driver'    => $connection->getDatabasePlatform()->getName(),
-            'host'      => $connection->getHost(),
-            'database'  => $connection->getDatabase(),
-            'username'  => $connection->getUsername(),
-            'password'  => $connection->getPassword(),
-            'storage'   => sprintf('%s%s', $this->projectDir, '/var/data/')
+            'driver' => $connection->getDatabasePlatform()->getName(),
+            'host' => $connection->getHost(),
+            'database' => $connection->getDatabase(),
+            'username' => $connection->getUsername(),
+            'password' => $connection->getPassword(),
+            'storage' => sprintf('%s%s', $this->projectDir, '/var/data/'),
         ];
     }
 }

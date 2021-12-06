@@ -1,4 +1,4 @@
 
 reference_extension:
-  resource: '../../vendor/acmecorp/reference-extension/src/Controller/'
+  resource: '../../vendor/bolt/tnt-search-engine/src/Controller/'
   type: annotation

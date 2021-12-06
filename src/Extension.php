@@ -25,6 +25,7 @@ class Extension extends BaseExtension
      */
     public function initialize($cli = false): void
     {
+        $this->addTwigNamespace('tnt-search');
     }
 
     /**

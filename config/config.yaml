@@ -1,3 +1,9 @@
-# Reference extension configuration file
+# TNT extension services
 
-foo: Bar
+## Define how the search works
+fuzzy:
+  enabled: true
+  prefix_length: 2
+  max_expansions: 50
+  distance: 2
+
