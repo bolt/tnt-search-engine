@@ -1,0 +1,30 @@
+{
+    "name": "acmecorp/reference-extension",
+    "description": "📦 This Bolt extension can be used as a starting point to base your own extensions on.",
+    "type": "bolt-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "YourNameHere",
+            "email": "youremail@acme.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.9",
+        "twig/twig": "^2.12 | ^3.0"
+    },
+    "require-dev": {
+        "bolt/core": "^4.1",
+        "symplify/easy-coding-standard": "^8.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "AcmeCorp\\ReferenceExtension\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "entrypoint": "AcmeCorp\\ReferenceExtension\\Extension"
+    }
+}
