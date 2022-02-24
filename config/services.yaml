@@ -4,6 +4,8 @@ services:
   _defaults:
     autowire: true
     autoconfigure: true
+    bind:
+      $defaultLocale: '%locale%'
 
   Bolt\TntSearch\Controller\:
     resource: '../../vendor/bolt/tnt-search-engine/src/Controller/'
