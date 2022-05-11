@@ -6,6 +6,7 @@ namespace Bolt\TntSearch\Controller;
 
 use Bolt\Controller\Frontend\FrontendZoneInterface;
 use Bolt\Controller\TwigAwareController;
+use Bolt\Enum\Statuses;
 use Bolt\Repository\ContentRepository;
 use Bolt\TntSearch\TntEngine;
 use Pagerfanta\Adapter\ArrayAdapter;
@@ -44,7 +45,7 @@ class SearchController extends TwigAwareController implements FrontendZoneInterf
         $tnt->selectIndex('records.index');
 
         $results = $tnt->search($searchTerm, 10000);
-        $records = $this->repository->findBy(['id' => $results['ids']]);
+        $records = $this->repository->findBy(['id' => $results['ids'], 'status' => Statuses::PUBLISHED]]);
         $records = new Pagerfanta(new ArrayAdapter($records));
         $records->setMaxPerPage($amountPerPage);
         $records->setCurrentPage($page);
