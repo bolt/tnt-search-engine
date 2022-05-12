@@ -45,7 +45,7 @@ class SearchController extends TwigAwareController implements FrontendZoneInterf
         $tnt->selectIndex('records.index');
 
         $results = $tnt->search($searchTerm, 10000);
-        $records = $this->repository->findBy(['id' => $results['ids'], 'status' => Statuses::PUBLISHED]]);
+        $records = $this->repository->findBy(['id' => $results['ids'], 'status' => Statuses::PUBLISHED]);
         $records = new Pagerfanta(new ArrayAdapter($records));
         $records->setMaxPerPage($amountPerPage);
         $records->setCurrentPage($page);
