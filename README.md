@@ -12,7 +12,7 @@ For example, a page has the following title: `Oranges and apples are healty`
 
 By default, the following searches will show up the page as a result:
 
-| Keyword  | Bolt naive search  | With this extension |
+| Keyword  | Bolt native search  | With this extension |
 |---|---|---|
 | Oranges  | ✅  | ✅  |
 | oranges  | ✅  | ✅  |
