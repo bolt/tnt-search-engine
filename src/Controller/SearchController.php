@@ -33,7 +33,7 @@ class SearchController extends TwigAwareController implements FrontendZoneInterf
 
     /**
      * @Route("/search", methods={"GET|POST"}, name="tnt_search")
-     * @Route("/{_locale}/search", methods={"GET|POST"}, name="tnt_search_locale")
+     * @Route("/{_locale}/search", methods={"GET|POST"}, name="tnt_search_locale", requirements={"_locale"="(?!_profiler)"})
      */
     public function search(): Response
     {
